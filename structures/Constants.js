@@ -7,13 +7,15 @@ module.exports = {
 	API : {
 		HOST: "www.virustotal.com",
 		PATH: "/vtapi/v2",
+		MAX_PUBLIC_FILESIZE: 32000000, //32MB
+		MAX_PRIVATE_FILESIZE: 200000000, //200MB
 
 
 
 		FILES: {
 			REPORT: "/file/report",
 			SCAN: "/file/scan",
-			UPLOAD_URL: "/file/upload_url", // For 200MB+ files
+			UPLOAD_URL: "/file/scan/upload_url",
 			RESCAN: "/file/rescan",
 			DOWNLOAD: "/file/download",
 			BEHAVIOUR: "/file/behaviour",

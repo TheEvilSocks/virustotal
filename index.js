@@ -132,7 +132,7 @@ class VirusTotal {
  			});
 
 			if(method === "POST"){
-				req.end( querystring.stringify(parameters) );
+				req.end( querystring.stringify(Object.assign({apikey:this.apiKey}, parameters)) );
 			}else{
 				req.end();
 			}

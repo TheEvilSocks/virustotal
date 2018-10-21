@@ -23,13 +23,13 @@ class VirusTotal {
 
  	/**
  	 * Create a new API client
- 	 * @arg {string} apiKey The VirusTotal API key. Used to make requests to the API.
- 	 * @arg {object} [optionalSettings] Optional settings.
- 	 * @arg {boolean} [optionalSettings.private] Make use of the Private API endpoints. READ MORE: https://developers.virustotal.com/v2.0/reference#public-vs-private-api
- 	 * @arg {object} [optionalSettings.dripperSettings] Used to configure the settings for the dripper which handles API ratelimits.
- 	 * @arg {number} [optionalSettings.ratelimit] The time (in seconds) for ratelimits.
- 	 * @arg {number} [optionalSettings.requests] The amount of requests per ratelimit time.
- 	 * @arg {number} [optionalSettings.latency] Network altency in milliseconds. Added on top of the ratelimit time basically.
+ 	 * @arg {String} apiKey The VirusTotal API key. Used to make requests to the API.
+ 	 * @arg {Object} [optionalSettings] Optional settings.
+ 	 * @arg {Boolean} [optionalSettings.private] Make use of the Private API endpoints. READ MORE: https://developers.virustotal.com/v2.0/reference#public-vs-private-api
+ 	 * @arg {Object} [optionalSettings.dripperSettings] Used to configure the settings for the dripper which handles API ratelimits.
+ 	 * @arg {Number} [optionalSettings.ratelimit] The time (in seconds) for ratelimits.
+ 	 * @arg {Number} [optionalSettings.requests] The amount of requests per ratelimit time.
+ 	 * @arg {Number} [optionalSettings.latency] Network altency in milliseconds. Added on top of the ratelimit time basically.
 
  	*/
 
@@ -60,8 +60,8 @@ class VirusTotal {
 
  	/**
  	 * Get a report of a file.
-	 * @arg {string} resource The resource(s) to be retrieved. Should be a hash of a file. MD5, SHA-1 and SHA-256 are supported.
-	 * @arg {boolean} [allInfo=false] Request additional information such as virustotal metadata,  sandbox behaviour and more. NOTE: Must be using Private API
+	 * @arg {String} resource The resource(s) to be retrieved. Should be a hash of a file. MD5, SHA-1 and SHA-256 are supported.
+	 * @arg {Boolean} [allInfo=false] Request additional information such as virustotal metadata,  sandbox behaviour and more. NOTE: Must be using Private API
 	 * @returns {Promise<Object>} 
  	*/
  	getFileReport(resource, allInfo=false){
@@ -70,7 +70,7 @@ class VirusTotal {
 
  	/**
  	 * Scan a file.
-	 * @arg {string | buffer} data The file contents to scan.
+	 * @arg {String | Buffer} data The file contents to scan.
 	 * @returns {Promise<Object>} 
  	*/
  	scanFile(data){
@@ -104,7 +104,7 @@ class VirusTotal {
 
  	/**
  	 * Scan a file from a path.
-	 * @arg {string} path The path the file is located at.
+	 * @arg {String} path The path the file is located at.
 	 * @returns {Promise<Object>} 
  	*/
  	scanFilePath(path){
@@ -122,7 +122,7 @@ class VirusTotal {
 
  	/**
  	 * [Private API] Get the upload url to upload files larger up to 200MB.
-	 * @arg {string} path The path the file is located at.
+	 * @arg {String} path The path the file is located at.
 	 * @returns {Promise<string>} 
  	*/
  	getUploadUrl(){
@@ -141,9 +141,9 @@ class VirusTotal {
 
  	/**
  	 * Create an API request.
-	 * @arg {string} method The HTTP method to make the request with. GET POST etc.
-	 * @arg {string} path The endpoint to contact. DO NOT INCLUDE /vtapi/v2/
-	 * @arg {object} parameters Parameters to include in the request. For GET request these are URL parameters, for POST requests these are body parameters. API key is automatically included
+	 * @arg {String} method The HTTP method to make the request with. GET POST etc.
+	 * @arg {String} path The endpoint to contact. DO NOT INCLUDE /vtapi/v2/
+	 * @arg {Object} parameters Parameters to include in the request. For GET request these are URL parameters, for POST requests these are body parameters. API key is automatically included
 	 * @returns {Promise<Object>} 
  	*/
  	apiRequest(method, path, parameters = {}){

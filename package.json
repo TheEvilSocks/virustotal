@@ -1,0 +1,26 @@
+{
+  "name": "virustotal",
+  "version": "1.0.0",
+  "description": "Library to communicate with the VirusTotal.com API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheEvilSocks/virustotal.git"
+  },
+  "keywords": [
+    "virustotal",
+    "api",
+    "malware",
+    "virus",
+    "scan"
+  ],
+  "author": "TheEvilSocks",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TheEvilSocks/virustotal/issues"
+  },
+  "homepage": "https://github.com/TheEvilSocks/virustotal#readme"
+}
